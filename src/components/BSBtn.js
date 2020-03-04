@@ -6,14 +6,17 @@ import { Button } from 'reactstrap'
 export default class BSBtn extends Component {
 
  handleClick = () => {
-    let BtnArray = ["red", "blue", "green"].map((btn) => {
-        return React.createElement(
+    let BtnArray = ["red", "blue", "green"]
+    
+    BtnArray.map((btn) => {
+            React.createElement(
             Button,
-            {variant: 'primary'},
-            btn,
+            BtnArray,
           )
+          return btn
     })
-    return BtnArray
+
+
  }
     
     render() {
